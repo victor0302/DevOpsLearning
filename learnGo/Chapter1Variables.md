@@ -53,4 +53,64 @@ Go is one of the fastest programming languages
 
 Go doesnt run quite as fast as its compiled Rust,Zig, and C.
 
-##
+## Type Sizes
+Integers, uints, floats, and complex numbers all have type sizes
+
+
+Signes integers(no decimal)
+
+int int8 int16 int32 int64
+
+
+unsigned integers(non-negative numbers/no deccimal)
+
+uint uint8 unit16 unit32 unit64 unitptr
+
+
+signed decimal numbers
+
+float32 float64
+
+
+Complex numbers( a complex number has a real and imiginary part)
+
+complex64 complex128
+
+What's the Deal with the Sizez?
+The size(8,16,32,128,etc) represents how many bits in memory will be used to store the variable. The default int and unit types refer to their respective 32 and 64 bit sizes depending on the enviroment of the user
+
+Standard types unless you have a specific performace need
+int
+unit
+float64
+complex128
+temperatureFloat := 88.26
+temperatureInt := int64(temperatureFloat)
+
+
+## Which Type Should I use?
+Prefer Default Types
+A problem arises when we have a uint16, and the function we are trying to pass it into takes an int.
+We're forced to write code riddled with type conversions like:
+var myAge uint16 = 25
+myAgeInt := int(myAge)
+This style of code ca be slow and annoying to read. Unless you have a good performace related reason, you'll typically just want to use the "default" types:
+bool
+string
+int
+uint
+byte
+rune
+float64
+complex128
+
+
+## Go is Statically Typed
+Go enforces static typing meaning variable types are known before the code runs. That means your editor and the complier can display type errors before the code is ever run, making development easier and faster.
+
+Contrast this with most dynamically typed languages like JavaScript and Python... Dynamic typing often leads to subtle bugs that are hard to detect. The code must be run to catch syntax and type erros.
+
+## Compiled vs. Interpreted
+You can run a compiled program 
+
+
