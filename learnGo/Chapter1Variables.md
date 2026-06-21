@@ -111,6 +111,16 @@ Go enforces static typing meaning variable types are known before the code runs.
 Contrast this with most dynamically typed languages like JavaScript and Python... Dynamic typing often leads to subtle bugs that are hard to detect. The code must be run to catch syntax and type erros.
 
 ## Compiled vs. Interpreted
-You can run a compiled program 
+You can run a compiled program without the original source code. You don't need the compiler anymore adter it's done its job. That's how most video games are distributed!
 
+With interpreted languages like Python and Ruby, the code is interpreted at runtime. Distributing code for users to run can be a pain because they need to have an interpreter installed, and they need access to the source code.
 
+One of the conveient things about using a compiled langauge like Go for Textio is that when we deploy our server we don't need to include any runtime language. We just add the pre-compiled binary to the server and start it up
+
+## Same Line Declarations
+mileage, company := 80276, "Toyota"
+
+## Small Memory Footprint
+Go programs are fairly lightweight. Each program includes a small amount of extra code that's includeed in the executable binary called the Go runtime. One purpose of the Go runtime is to clean up unused memory at runtime. It includes a harbage collector that automatically frees up memory that's no longer in use.
+
+stack allocation is better than heap allocation for performance
